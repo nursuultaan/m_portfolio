@@ -52,7 +52,7 @@ const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
         <div className={"container projects w-full h-full  flex  gap-10 bg-yellow-300"}>
 
 
-           <div className={"flex-1 text-base p-8  flex justify-center  gap-5 "}>
+           <div className={"flex-1 text-base p-8  flex flex-col justify-center  gap-5 "}>
                <h1 className={"text-4xl"}>{currProject.title}</h1>
                <p>{currProject.desc}</p>
                <ul className={"flex text-3xl gap-4"}>
