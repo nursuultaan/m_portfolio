@@ -23,6 +23,9 @@
     .about-me{
         width: 100%;
     }
+    .projects{
+        flex-direction: column;
+    }
 }
 
 
