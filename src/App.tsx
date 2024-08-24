@@ -79,9 +79,8 @@ const App: React.FC = () => {
 
                 isMobile ?
                     <Sider
-                        breakpoint="md" // Breakpoint for responsive behavior
-                        collapsedWidth="0" // Width when collapsed
-
+                        breakpoint="md"
+                        collapsedWidth="0"
                         className={`${collapsed ? "hidden" : "block"}`}
                         collapsed={collapsed}
                         onCollapse={(value) => setCollapsed(value)}
@@ -90,8 +89,6 @@ const App: React.FC = () => {
                     </Sider>
                     :
                     <Sider
-
-
                         collapsed={false}
                         onCollapse={(value) => setCollapsed(value)}
                     >

@@ -49,7 +49,7 @@ const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
 
 
     return (
-        <div className={"w-full h-full flex  gap-10 bg-yellow-300"}>
+        <div className={"container w-full h-full  flex flex-col md:flex-row gap-10 bg-yellow-300"}>
 
 
            <div className={"flex-1 text-base p-3  flex justify-center flex-col gap-5 "}>
