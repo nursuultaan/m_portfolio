@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ant-input::placeholder {
+    font-size: 16px; /* Adjust font size here */
+}
+
+/* For TextArea */
+.ant-input-textarea::placeholder {
+    font-size: 16px; /* Adjust font size here */
+}
+
+/* For DatePicker */
+.ant-picker-input input::placeholder {
+    font-size: 16px; /* Adjust font size here */
+}
+
+@media (max-width: 1000px) {
+    .contact-details {
+        display: none;
+    }
+    .about-me{
+        width: 100%;
+    }
+}
+
+
+
+
