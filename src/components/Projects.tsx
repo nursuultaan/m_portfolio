@@ -52,15 +52,15 @@ const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
         <div className={"container w-full h-full  flex flex-col md:flex-row gap-10 bg-yellow-300"}>
 
 
-           <div className={"flex-1 text-base p-3  flex justify-center flex-col gap-5 "}>
+           <div className={"flex-1 text-base p-8  flex justify-center flex-col gap-5 "}>
                <h1 className={"text-4xl"}>{currProject.title}</h1>
                <p>{currProject.desc}</p>
                <ul className={"flex text-3xl gap-4"}>
                    <li>
-                       <a> <GithubOutlined/></a>
+                       <a href={currProject.githubLink}> <GithubOutlined/></a>
                    </li>
                    <li>
-                       <a> <LinkOutlined /></a>
+                       <a href={currProject.websiteLink}> <LinkOutlined /></a>
                    </li>
                </ul>
            </div>
