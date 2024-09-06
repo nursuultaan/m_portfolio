@@ -4,6 +4,7 @@ import React, {useEffect, useState} from "react";
 import {GithubOutlined, LinkOutlined} from "@ant-design/icons";
 import IphoneVideo from "../assets/iphone.mp4"
 import pizzaVideo from "../assets/pizza.mp4"
+import karavanVideo from "../assets/karavan.mp4"
 
 const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
 
@@ -26,9 +27,9 @@ const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
         },
         {
             key:"5",
-            title: "Chat Application",
-            desc: "A chat application with a frontend developed in React and a backend using SQL, Node.js, and Express.js. It utilizes the Socket API for real-time communication, JWT for user authentication, and Redux for state management.",
-            video: "#",
+            title: "Karavan Website",
+            desc: "Developed an e-commerce platform using C# and .NET for the backend with a REST API. The frontend is built with React.js, ensuring a dynamic and user-friendly interface. Integrated AWS S3 for image storage and MySQL for efficient database management. The application offers a seamless experience for users to browse and shop online",
+            video: karavanVideo,
             githubLink: "https://github.com/nursuultaan/chat-application",
             websiteLink: "#"
         },
