@@ -31,13 +31,24 @@ function getItem(
     } as MenuItem;
 }
 
-const items: MenuItem[] = [
+const itemsDesktop: MenuItem[] = [
     getItem('Close', '1', <CloseOutlined />),
     getItem('About me', '2', <UserOutlined />),
     getItem('Projects', '3', <CodeOutlined />, [
         getItem('Iphone website', '4'),
         getItem('Pizza store', '5'),
-        getItem('Chat App', '6'),
+        getItem('Karavan Website', '6'),
+    ]),
+    getItem('Contact me', '7', <SendOutlined />),
+];
+
+
+const itemsMobile: MenuItem[] = [
+    getItem('About me', '2', <UserOutlined />),
+    getItem('Projects', '3', <CodeOutlined />, [
+        getItem('Iphone website', '4'),
+        getItem('Pizza store', '5'),
+        getItem('Karavan Website', '6'),
     ]),
     getItem('Contact me', '7', <SendOutlined />),
 ];
@@ -55,7 +66,7 @@ const App: React.FC = () => {
         switch (selectedKey) {
             case "2":
                 return <AboutMe selectedKey={selectedKey} />;
-            case "6":
+            case "7":
                 return <ContactMe />;
             default:
                 return <Projects selectedKey={selectedKey} />;
@@ -83,14 +94,14 @@ const App: React.FC = () => {
                     collapsed={collapsed}
                     onCollapse={(value) => setCollapsed(value)}
                 >
-                    <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" items={items} onClick={handleMenuClick} />
+                    <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" items={itemsDesktop} onClick={handleMenuClick} />
                 </Sider>
             ) : (
                 <Sider
                     collapsed={false}
                     onCollapse={(value) => setCollapsed(value)}
                 >
-                    <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" items={items} onClick={handleMenuClick} />
+                    <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" items={itemsMobile} onClick={handleMenuClick} />
                 </Sider>
             )}
 

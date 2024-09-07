@@ -9,7 +9,7 @@ import ReactPlayer from "react-player";
 
 const initialProjects = [
     {
-        key:"3",
+        key:"4",
         title: "iPhone Page",
         desc: "A React and Framer Motion-based website featuring a 3D model of the iPhone. Users can select different colors and sizes of the phone. This project demonstrates interactive UI elements and smooth animations.",
         video: IphoneVideo,
@@ -17,7 +17,7 @@ const initialProjects = [
         websiteLink: "https://myphone1234.netlify.app/"
     },
     {
-        key:"4",
+        key:"5",
         title: "Pizza Store",
         desc: "A React and JavaScript-based application styled with Tailwind CSS. It is a simple delivery and store application that allows users to browse and order pizza. This project includes functionality for selecting and customizing pizza orders.",
         video: pizzaVideo,
@@ -25,7 +25,7 @@ const initialProjects = [
         websiteLink: "https://heroic-pie-1edb6b.netlify.app/"
     },
     {
-        key:"5",
+        key:"6",
         title: "Karavan Website",
         desc: "Developed an e-commerce platform using C# and .NET for the backend with a REST API. The frontend is built with React.js, ensuring a dynamic and user-friendly interface. Integrated AWS S3 for image storage and MySQL for efficient database management. The application offers a seamless experience for users to browse and shop online \n Did not deploy fully.",
         video: karavanVideo,
@@ -37,18 +37,17 @@ const initialProjects = [
 
 const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
 
-
-
     const [projects] = useState<Project[]>(initialProjects);
 
     const [currProject ,setCurrProject]= useState(projects[0]);
 
     useEffect(()=>{
 
-        const index :number = Number(selectedKey) -2 -1;
-
+        const index :number = Number(selectedKey) -2 -2;
         setCurrProject(projects[index])
     },[selectedKey]);
+
+
 
 
     return (
@@ -68,12 +67,21 @@ const Projects:React.FC<ProjectProps> = ({selectedKey}) => {
                </ul>
            </div>
 
-            <div className={"tv flex-1 p-3  flex flex-col justify-center r" }>
+            <div className={"flex-1 p-3  flex flex-col justify-center r" }>
 
                 {/*<video className={"border-black border-2"} src={currProject.video} loop={true} autoPlay={true}>*/}
                 {/*</video>*/}
 
-                <ReactPlayer   className={"object-fit border-black border-2 p-1 bg-black"} controls={true}  loop={true} playing={true} url={currProject.video} />
+                <ReactPlayer
+                    className={"w-full h-auto border-black border-2 p-1 bg-black"}
+                    id={"tv"}
+                    controls={true}
+                    loop={true}
+                    playing={true}
+                    url={currProject.video}
+                />
+
+
                 <div className={"flex items-center flex-col"}>
                     <div className={"w-1/12 h-[40px] bg-black"}></div>
                     <div className={"w-4/6 h-[30px] bg-black"}></div>
